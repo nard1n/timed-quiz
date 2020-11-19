@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css">
+    <title>Coding Quiz</title>
+</head>
+
+<body>
+    
+    <!-- HEADER CONTET -->
+
+    <header>
+        <nav>
+            <a href="#">View Highscores</a>
+        </nav>
+        <h1 class="time">Time: 0</h1>
+    </header>
+
+    <!-- MAIN CONTANT -->
+
+    <main>
+      <section class="container quiz">
+          <h2>Coding Quiz Challenge</h2>
+          <p>
+              Try to answer the following code-related question within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+          </p>
+          <button class="button">Start Quiz</button>
+      </section>
+
+      <p id="question"></p>
+ 
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+ 
+            <hr style="margin-top: 50px">
+
+            <footer>
+                <p id="result"></p>
+            </footer>
+        </div>
+
+<!-- Javascript File -->
+<script src="./script.js"></script>
+
+</body>
+</html>
