@@ -26,3 +26,7 @@ function sendMessage() {
 }
 
 setTime();
+
+//$(".start-button").on("click", funtion(){
+//    setTime();
+//});
