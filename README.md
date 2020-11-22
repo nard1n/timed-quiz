@@ -4,15 +4,15 @@ Timed Quiz Application
 
 ## Description
 
-This is a timed coding quiz with multiple-choice questions. This application runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code. The user gets to test their Javascript knowledge by answering various questions. The user geets to stor their highscore in the application to share and compare with their peers. The quiz has a polished and responsive UI.
+This is a timed quiz with multiple-choice questions. This application runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code. The user gets to test their (National Park) knowledge by answering various questions. The user gets to store their highscore in the application to share and compare with their peers. The quiz has a polished and responsive UI.
 
 ## Requirements:
-   * The application presents the user with a coding quiz
+   * The application presents the user with a quiz
    * When user clicks the start button, a timer starts and they are presented with a question
    * Once the user answers the question they are presented with the next question
-   * If the user answers a question incorrectly, they get penalized and lose 5 seconds from timer
+   * If the user answers a question incorrectly, they get penalized and lose 10 seconds from timer
    * Quiz ends when one of the following is met: user answers all questions OR time reaches 0
-   * User has the ability to save score by along with the input of their initials
+   * User has the ability to save score along with the input of their name
 
 ## Table of Contents (Optional)
 
