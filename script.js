@@ -1,25 +1,26 @@
 // A quiz build with Javascript, displays one question at a time and allows user to save score
-// Time counter variables/ end of quiz
-var timeEl = document.querySelector (".time");
-var savedScore = document.querySelector (".save-score");
+// DOM SELECTORS FOR MOST MAIN DIVS
 var quizContainer = document.querySelector(".quiz-question");
-var submitAnswer = document.querySelector("button");
+var savedScore = document.querySelector (".save-score");
 var startTimer = document.querySelector(".start-button");
 var displayStart = document.querySelector(".start-instructions");
 
+// DOM SELECTORS SPECIFIC TO HIGHSCORES
 var anchor = document.querySelector(".anchor");
+var highscoreListNames = document.querySelector(".high-scores")
 var viewHighScores = document.querySelector(".high-score-list");
 var goBack = document.querySelector(".go-back");
 var clearScore = document.querySelector(".clear-scores");
 
-var finalScoreIs = document.querySelector(".final-score-is");
+// DOM SELECTORS SPECIFIC TO END OF QUIZ
 var addNameBtn = document.querySelector(".add-btn");
-var scoreListNames = document.querySelector(".top-scores");
-var highscoreListNames = document.querySelector(".high-scores")
+var finalScoreIs = document.querySelector(".final-score-is");
 var nameEl = document.querySelector(".name-input");
 var players = [];
 
-
+//DOM SELECTORS SPECIFIC TO QUIZ
+var timeEl = document.querySelector (".time");
+var submitAnswer = document.querySelector("button");
 var quizQuestionHeader = document.querySelector(".question-text");
 var choice1 = document.querySelector(".choice1");
 var choice2 = document.querySelector(".choice2");
@@ -27,7 +28,7 @@ var choice3 = document.querySelector(".choice3");
 var choice4 = document.querySelector(".choice4");
 var result = document.querySelector(".result");
 
-// quiz questions and answer choices stored in an array
+// QUIZ QUESTIONS AND ANSWERS STORED IN ARRAY
 var myQuestions = [
     {
         "questionText": "What was the first national park in America?",
@@ -63,15 +64,15 @@ var myQuestions = [
     }
 ];
 
+// VARIABLES SPECIFIC TO STARTING QUIZ
 var startScore = 0;
 var questionIndex = 0;
 
-// starts quiz and timer
+// STARTS QUIZ AND TIMER
 function startQuiz() {
     secondsLeft = 30; //seconds in timer to start
-
-    displayStart.style.display = "none"; // Hide Rules 
-    quizContainer.style.display = "block"; // Show Quiz Questions Page
+    displayStart.style.display = "none"; // Hide instructions 
+    quizContainer.style.display = "block"; // Show Quiz Questions
 
     var timeInterval = setInterval (function() {
         secondsLeft--;
@@ -86,7 +87,12 @@ function startQuiz() {
     }, 1000);
 }
 
-// display quiz questions when user clicks start quiz button
+function pauseTimer () {
+    clearInterval(timeInterval);
+    secondsLeft();
+}
+
+// DISPLAY QUIZ QUESTIONS WHNE USER CLICKS STARTS QUIZ
 function showNextQuestion(){
     var q = myQuestions[questionIndex];
 
@@ -147,7 +153,9 @@ function checkAnswer(event) {
 // GO TO "ALL DONE" PAGE AND SHOW FINAL SCORE
 function showFinalScore() { //Function to go to page when time out or quiz complete 
     quizContainer.style.display = "none"; // Hide Questions
-    savedScore.style.display = "block"; // Show Final Score Page 
+    savedScore.style.display = "block"; // Show Final Score Page
+    timeEl.innerHTML = secondsLeft.value;
+
   
     //console.log ("Your final score is " + secondsLeft); TO TEST, WORKS
     finalScoreIs.innerHTML = "Your final score is " + secondsLeft;
@@ -197,11 +205,6 @@ clearScore.addEventListener("click", function(){
 
 //setTime(); /to test timer runs on page loads
 
-
-function sendMessage() {   
-    quizContainer.style.display = 'none';
-    savedScore.style.display = 'block';
-}
 
 startTimer.addEventListener("click", function() { 
     startQuiz()
