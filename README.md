@@ -26,7 +26,7 @@ This is a timed quiz with multiple-choice questions. This application runs in th
 
 ## Installation
 
-    clone this repository and practive away
+    Feel free to clone this repository for personal and/or professional use. Or you can simply reference it to practice your coding skill 
 
 ## Usage
 
