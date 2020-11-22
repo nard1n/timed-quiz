@@ -9,43 +9,72 @@
 
 <body>
     
-    <!-- HEADER CONTET -->
+    <!-- HEADER CONTENT/NAV/Timer-->
 
     <header>
         <nav>
-            <a href="#">View Highscores</a>
+            <a href="#" class="anchor">View Highscores</a>
         </nav>
         <h1 class="time">Time: 0</h1>
     </header>
 
     <!-- MAIN CONTANT -->
 
-    <main>
-      <section class="container quiz">
+    <main class="container flex-center flex-column quiz">
+      
+      <!-- Quiz Instructions -->
+      <div class="start-instructions">
           <h2>Coding Quiz Challenge</h2>
           <p>
               Want to test your National Parks knowledge? Jump right in and try to answer the following quiz question within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
           </p>
           <button class="button start-button">Start Quiz</button>
-      </section>
- 
-            <div id="quizQustion">
-                <p id="questionText"></p>
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
-            </div>
-            <div id="saveScore"></div>
-
-            <div>
-
-            </div>
-            <hr style="margin-top: 50px">
-            <footer>
-                <p id="result"></p>
-            </footer>
         </div>
+        
+        <!-- Quiz Questions -->
+            <div class="quiz-question">
+                <p class="question-text"></p>
+                <ul>
+                <li><button class="btn1 choice1"></button></li>
+                <li><button class="btn2 choice2"></button></li>
+                <li><button class="btn3 choice3"></button></li>
+                <li><button class="btn4 choice4"></button></li>
+              </ul>
+            </div>
+
+        <!-- Game Over -->
+            <div class="save-score">
+              <h2>All Done!</h2>
+              <h3 class="final-score-is"></h3>
+              <br>
+              <p>Save your score to the score board</p>
+                  <ul class="top-scores">
+                    <li class="name" id=""></li>
+                  </ul>
+                  <input placeholder="Your name" class="name-input">
+                  <button class="add-btn">Add your score</button>
+            </div>
+
+        <!-- Highscores -->
+        
+          <div class="high-score-list">
+            <h2>List of High Scores:</h2>
+            <ul class="high-scores">
+                <li class="name" id=""></li>
+            </ul>
+            <div class="col-sm-12 text-center">
+                <button class="go-back">Go Back</button></a>
+                <button class="clear-scores" value="reset-form">Clear High Scores</button>
+            </div>
+          </div>
+
+        <!-- Result Feedback -->
+          <hr style="margin-top: 50px">
+          <footer>
+              <p class="result"></p>
+          </footer>
+      </div>
+  </main>
 
 <!-- Javascript File -->
 <script src="./script.js"></script>

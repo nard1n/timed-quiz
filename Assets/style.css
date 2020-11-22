@@ -49,6 +49,13 @@ button:hover{
   background-color: palevioletred;
 }
 
+.quiz-question,
+.save-score,
+.high-score-list{
+    max-width: 560px;
+    display: none;
+}
+
 .container {
   text-align: center;
   width: 700px;
@@ -72,3 +79,7 @@ button:hover{
   color: rgb(82, 82, 82);
   font-size: 12px;
 }
+
+li {
+  list-style-type: none;
+ }
