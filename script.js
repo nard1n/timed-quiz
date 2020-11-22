@@ -71,7 +71,7 @@ var questionIndex = 0;
 // STARTS QUIZ AND TIMER
 function startQuiz() {
     questionIndex = 0;
-    secondsLeft = 30; //seconds in timer to start
+    secondsLeft = 80; //seconds in timer to start
     displayStart.style.display = "none"; // Hide instructions 
     quizContainer.style.display = "block"; // Show Quiz Questions
 
