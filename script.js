@@ -70,6 +70,7 @@ var questionIndex = 0;
 
 // STARTS QUIZ AND TIMER
 function startQuiz() {
+    questionIndex = 0;
     secondsLeft = 30; //seconds in timer to start
     displayStart.style.display = "none"; // Hide instructions 
     quizContainer.style.display = "block"; // Show Quiz Questions
@@ -79,17 +80,11 @@ function startQuiz() {
         timeEl.textContent = "Time: " + secondsLeft;
 
         if (secondsLeft <= 0 || myQuestions.length === questionIndex) {
-            timeEl.textContent = "Time: 0";
+            timeEl.textContent = "Time: " + secondsLeft;
             clearInterval(timeInterval);
-            sendMessage();
         }
 
     }, 1000);
-}
-
-function pauseTimer () {
-    clearInterval(timeInterval);
-    secondsLeft();
 }
 
 // DISPLAY QUIZ QUESTIONS WHNE USER CLICKS STARTS QUIZ
@@ -154,8 +149,6 @@ function checkAnswer(event) {
 function showFinalScore() { //Function to go to page when time out or quiz complete 
     quizContainer.style.display = "none"; // Hide Questions
     savedScore.style.display = "block"; // Show Final Score Page
-    timeEl.innerHTML = secondsLeft.value;
-
   
     //console.log ("Your final score is " + secondsLeft); TO TEST, WORKS
     finalScoreIs.innerHTML = "Your final score is " + secondsLeft;
