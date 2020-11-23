@@ -79,7 +79,7 @@ function startQuiz() {
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft;
 
-        if (secondsLeft <= 0 || myQuestions.length === questionIndex) {
+        if (secondsLeft <= 0 || (myQuestions.length - 1) === questionIndex) { //myquestion.length will be 4, index is 3 - this is to account for that difference
             timeEl.textContent = "Time: " + secondsLeft;
             clearInterval(timeInterval);
         }
